@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: quickexit-site
+    runtime: static
+    staticPublishPath: .
+    headers:
+      - path: /*
+        name: Cache-Control
+        value: public, max-age=3600
+    routes:
+      - type: rewrite
+        source: /book-call
+        destination: /book-call.html
+      - type: rewrite
+        source: /assessment
+        destination: /assessment.html
+      - type: rewrite
+        source: /*
+        destination: /index.html

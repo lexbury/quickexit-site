@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sell Your Alberta Business — Fast, Fair, Confidential | Lexbury Quick Exit</title>
+<meta name="description" content="A real buyer for your Calgary or Alberta business — not a broker. No listing, no fees, no parade of strangers. One honest conversation, a fair offer, and a close in about 60 days. Completely confidential.">
+<link rel="icon" href="/favicon.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<style>
+:root{
+  --navy:#1D282E; --navy-2:#26343d; --navy-3:#31424c;
+  --gold:#C9A84C; --gold-lt:#e0c982; --gold-deep:#a8842f;
+  --cream:#faf8f2; --paper:#ffffff; --ink:#2b3840; --muted:#5c6a72; --line:#e7e2d6;
+  --good:#2d7a4f;
+  --serif:Georgia,'Times New Roman',serif;
+  --sans:system-ui,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:var(--sans);color:var(--ink);background:var(--paper);line-height:1.6;-webkit-font-smoothing:antialiased;}
+a{color:inherit;}
+img{max-width:100%;display:block;}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px;}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:50;background:var(--navy);border-bottom:1px solid rgba(255,255,255,.06);}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;padding-top:14px;padding-bottom:14px;}
+.nav .logo{height:38px;width:auto;}
+.btn{display:inline-block;font-family:var(--sans);font-weight:700;font-size:.92rem;padding:11px 22px;border-radius:6px;text-decoration:none;cursor:pointer;border:none;transition:transform .1s,background .15s;}
+.btn:hover{transform:translateY(-1px);}
+.btn-gold{background:var(--gold);color:var(--navy);}
+.btn-gold:hover{background:var(--gold-lt);}
+.btn-ghost{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.3);}
+.btn-ghost:hover{background:rgba(255,255,255,.08);}
+.btn-lg{font-size:1.02rem;padding:15px 30px;}
+.nav .btn{padding:9px 18px;font-size:.86rem;}
+
+/* hero */
+.hero{background:radial-gradient(130% 120% at 80% 0%, #29373f 0%, var(--navy) 55%);color:#fff;padding:74px 0 84px;}
+.hero .eyebrow{color:var(--gold);font-size:.8rem;letter-spacing:.22em;text-transform:uppercase;font-weight:700;margin-bottom:18px;}
+.hero h1{font-family:var(--serif);font-size:3.15rem;line-height:1.08;font-weight:700;letter-spacing:-.5px;max-width:15ch;}
+.hero h1 .em{color:var(--gold-lt);font-style:italic;}
+.hero .sub{font-size:1.22rem;color:#d3dbde;margin-top:22px;max-width:44ch;}
+.hero .cta-row{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px;}
+.hero .trust{margin-top:30px;font-size:.9rem;color:#9fb0b8;display:flex;align-items:center;gap:10px;flex-wrap:wrap;}
+.hero .trust b{color:#e6ecee;font-weight:600;}
+.hero .trust .dot{width:4px;height:4px;border-radius:50%;background:var(--gold);}
+
+/* situations */
+.situations{background:var(--cream);padding:56px 0;border-bottom:1px solid var(--line);}
+.situations .lead{font-family:var(--serif);font-size:1.7rem;color:var(--navy);text-align:center;max-width:22ch;margin:0 auto 8px;line-height:1.25;}
+.situations .subline{text-align:center;color:var(--muted);font-size:1.02rem;margin-bottom:30px;}
+.sit-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;}
+.sit{background:var(--paper);border:1px solid var(--line);border-radius:100px;padding:10px 20px;font-size:.95rem;font-weight:600;color:var(--navy);}
+.sit span{color:var(--gold-deep);}
+
+/* section base */
+.section{padding:70px 0;}
+.section h2{font-family:var(--serif);font-size:2.1rem;color:var(--navy);text-align:center;font-weight:700;letter-spacing:-.4px;margin-bottom:8px;}
+.section .kicker{text-align:center;color:var(--gold-deep);font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;font-weight:700;margin-bottom:12px;}
+.section .intro{text-align:center;color:var(--muted);font-size:1.08rem;max-width:52ch;margin:0 auto 42px;}
+
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+.step{text-align:center;padding:8px;}
+.step .n{width:52px;height:52px;border-radius:50%;background:var(--navy);color:var(--gold);font-family:var(--serif);font-size:1.5rem;font-weight:700;display:grid;place-items:center;margin:0 auto 18px;}
+.step h3{font-family:var(--serif);font-size:1.3rem;color:var(--navy);margin-bottom:8px;}
+.step p{color:var(--muted);font-size:.98rem;}
+
+/* comparison */
+.compare{background:var(--navy);color:#fff;}
+.compare h2{color:#fff;}
+.compare .kicker{color:var(--gold);}
+.compare .intro{color:#b9c4c8;}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:840px;margin:0 auto;}
+.col{background:var(--navy-2);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:26px 28px;}
+.col.us{border-color:var(--gold);}
+.col h4{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;font-weight:700;margin-bottom:16px;}
+.col.them h4{color:#8fa0a8;} .col.us h4{color:var(--gold);}
+.col ul{list-style:none;}
+.col li{display:flex;gap:12px;align-items:flex-start;padding:9px 0;font-size:1rem;border-bottom:1px solid rgba(255,255,255,.06);}
+.col li:last-child{border-bottom:none;}
+.mark{flex:none;width:20px;height:20px;border-radius:50%;display:grid;place-items:center;font-size:.72rem;font-weight:800;margin-top:2px;}
+.col.them .mark{background:rgba(255,255,255,.08);color:#8fa0a8;}
+.col.us .mark{background:var(--gold);color:var(--navy);}
+.col.them li{color:#aeb9bd;} .col.us li{color:#eef2f3;}
+
+/* mike */
+.mike{background:var(--cream);}
+.mike-inner{max-width:760px;margin:0 auto;text-align:center;}
+.mike .quote{font-family:var(--serif);font-size:1.85rem;line-height:1.35;color:var(--navy);font-style:italic;}
+.mike .quote .g{color:var(--gold-deep);}
+.mike .body{color:var(--muted);font-size:1.06rem;margin-top:22px;max-width:60ch;margin-left:auto;margin-right:auto;}
+.mike .sig{margin-top:24px;font-family:var(--serif);font-size:1.15rem;color:var(--navy);font-weight:700;}
+.mike .sig small{display:block;font-family:var(--sans);font-size:.82rem;color:var(--muted);font-weight:400;letter-spacing:.04em;margin-top:2px;}
+
+/* final cta */
+.final{background:radial-gradient(120% 130% at 20% 0%, #29373f 0%, var(--navy) 60%);color:#fff;text-align:center;padding:76px 0;}
+.final h2{font-family:var(--serif);font-size:2.4rem;color:#fff;margin-bottom:12px;letter-spacing:-.4px;}
+.final p{color:#c3cdd0;font-size:1.12rem;max-width:44ch;margin:0 auto 30px;}
+.final .cta-row{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;}
+.final .fine{margin-top:22px;font-size:.85rem;color:#8698a0;}
+
+/* footer */
+footer{background:#161f24;color:#93a2a9;padding:40px 0;font-size:.9rem;}
+footer .wrap{display:flex;flex-wrap:wrap;gap:24px;justify-content:space-between;align-items:center;}
+footer .logo{height:34px;opacity:.9;}
+footer a{color:var(--gold-lt);text-decoration:none;}
+footer .meta{text-align:right;line-height:1.7;}
+footer .disc{color:#6b7981;font-size:.8rem;margin-top:6px;}
+
+@media(max-width:800px){
+  .hero{padding:54px 0 60px;}
+  .hero h1{font-size:2.35rem;}
+  .hero .sub{font-size:1.08rem;}
+  .steps{grid-template-columns:1fr;gap:30px;}
+  .cols{grid-template-columns:1fr;}
+  .section{padding:54px 0;}
+  .section h2,.mike .quote{font-size:1.7rem;}
+  .final h2{font-size:1.9rem;}
+  footer .wrap{justify-content:center;text-align:center;}
+  footer .meta{text-align:center;}
+  .nav .logo{height:32px;}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="wrap">
+    <a href="/"><img class="logo" src="/qe-logo-white.png" alt="Lexbury Quick Exit"></a>
+    <a class="btn btn-gold" href="/book-call">Book a Call</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">A real buyer &middot; not a broker &middot; Calgary &amp; Alberta</div>
+    <h1>Ready to sell your business? <span class="em">Fast, private, done.</span></h1>
+    <p class="sub">One honest conversation, a fair offer, and a close in about 60&nbsp;days. No brokers, no fees, no parade of strangers through your business.</p>
+    <div class="cta-row">
+      <a class="btn btn-gold btn-lg" href="/assessment">See if you're a fit — 2 min</a>
+      <a class="btn btn-ghost btn-lg" href="/book-call">Book a call with Mike</a>
+    </div>
+    <div class="trust">
+      <b>Mike Cook</b><span class="dot"></span>800+ businesses reviewed<span class="dot"></span>15 acquired<span class="dot"></span>Completely confidential
+    </div>
+  </div>
+</header>
+
+<!-- SITUATIONS -->
+<section class="situations">
+  <div class="wrap">
+    <div class="lead">Life doesn't wait for the "perfect time" to sell.</div>
+    <div class="subline">Most owners don't sell because it's textbook-ideal. They sell because something changed.</div>
+    <div class="sit-grid">
+      <div class="sit"><span>Health</span></div>
+      <div class="sit"><span>Burnout</span></div>
+      <div class="sit"><span>A partner who wants out</span></div>
+      <div class="sit"><span>Retirement</span></div>
+      <div class="sit"><span>Financial pressure</span></div>
+      <div class="sit"><span>No one to hand it to</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="section">
+  <div class="wrap">
+    <div class="kicker">How it works</div>
+    <h2>Three steps. About sixty days.</h2>
+    <p class="intro">No listing. No prep. No dressing it up. You sell it as it is, quietly, on your timeline.</p>
+    <div class="steps">
+      <div class="step">
+        <div class="n">1</div>
+        <h3>One conversation</h3>
+        <p>Take the free 2-minute fit-check, or just book a call. You tell me about the business — no obligation, complete confidentiality.</p>
+      </div>
+      <div class="step">
+        <div class="n">2</div>
+        <h3>A fair offer</h3>
+        <p>I review your numbers directly — I'm the buyer, not a middleman. If it's a fit, I make you a fair, straightforward offer.</p>
+      </div>
+      <div class="step">
+        <div class="n">3</div>
+        <h3>We close</h3>
+        <p>Diligence handled internally, seller financing where it helps, and a close in about 60 days — on your terms.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPARISON -->
+<section class="section compare">
+  <div class="wrap">
+    <div class="kicker">Not a broker</div>
+    <h2>The difference that matters</h2>
+    <p class="intro">Most "sell your business" offers come from brokers who list you and wait. I'm the buyer.</p>
+    <div class="cols">
+      <div class="col them">
+        <h4>A broker / listing</h4>
+        <ul>
+          <li><span class="mark">✕</span> Your business listed on a for-sale site</li>
+          <li><span class="mark">✕</span> Strangers walking through your business</li>
+          <li><span class="mark">✕</span> A 6–12 month process with no certainty</li>
+          <li><span class="mark">✕</span> Commissions and fees out of your pocket</li>
+          <li><span class="mark">✕</span> A buyer who might still walk at the end</li>
+        </ul>
+      </div>
+      <div class="col us">
+        <h4>Lexbury Quick Exit</h4>
+        <ul>
+          <li><span class="mark">✓</span> A real buyer with capital — me</li>
+          <li><span class="mark">✓</span> Your privacy, start to finish</li>
+          <li><span class="mark">✓</span> About 60 days to a close</li>
+          <li><span class="mark">✓</span> No broker fees, no commissions</li>
+          <li><span class="mark">✓</span> A fair price you can count on</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MIKE -->
+<section class="section mike">
+  <div class="wrap mike-inner">
+    <div class="kicker">Who you're dealing with</div>
+    <p class="quote">"I'd rather lose a deal because we weren't a fit than <span class="g">waste your time pretending we are.</span>"</p>
+    <p class="body">I've spent my career acquiring private businesses — over 800 reviewed and 15 bought. I'm not a broker or a consultant. I don't list businesses, charge fees, or march buyers through your shop. When you're ready to sell, I'm the buyer. You give up the chance at top-of-market; in return, you get speed, privacy, and certainty of close.</p>
+    <div class="sig">Mike Cook<small>LEXBURY INVESTMENTS &middot; CALGARY, AB</small></div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final">
+  <div class="wrap">
+    <h2>Ready to be done?</h2>
+    <p>See if you're a fit in two minutes — no obligation, and no one calls unless you ask.</p>
+    <div class="cta-row">
+      <a class="btn btn-gold btn-lg" href="/assessment">Take the 2-minute fit-check</a>
+      <a class="btn btn-ghost btn-lg" href="/book-call">Book a call with Mike</a>
+    </div>
+    <div class="fine">Confidential &middot; No obligation &middot; Alberta businesses, $500K+ revenue</div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div>
+      <img class="logo" src="/qe-logo-white.png" alt="Lexbury Quick Exit">
+    </div>
+    <div class="meta">
+      Lexbury Investments &middot; Calgary, AB<br>
+      <a href="tel:5878995378">587.899.5378</a> &middot; <a href="mailto:cook@lexbury.com">cook@lexbury.com</a>
+      <div class="disc">A direct buyer of Alberta businesses. Every conversation is confidential.</div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
