@@ -3,18 +3,22 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sell Your Alberta Business — Fast, Fair, Confidential | Lexbury Quick Exit</title>
-<meta name="description" content="A real buyer for your Calgary or Alberta business — not a broker. No listing, no fees, no parade of strangers. One honest conversation, a fair offer, and a close in about 60 days. Completely confidential.">
+<title>Sell Your Alberta Business, Fast and Confidential | Lexbury Quick Exit</title>
+<meta name="description" content="A real buyer for your Calgary or Alberta business, not a broker. No listing, no fees, no parade of strangers. One honest conversation, a fair offer, and a close in less than 6 months. Completely confidential.">
 <link rel="icon" href="/favicon.png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
   --navy:#1D282E; --navy-2:#26343d; --navy-3:#31424c;
   --gold:#C9A84C; --gold-lt:#e0c982; --gold-deep:#a8842f;
   --cream:#faf8f2; --paper:#ffffff; --ink:#2b3840; --muted:#5c6a72; --line:#e7e2d6;
   --good:#2d7a4f;
-  --serif:Georgia,'Times New Roman',serif;
-  --sans:system-ui,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+  /* Option D typography (both sans): --serif = DISPLAY face, --sans = BODY face */
+  --serif:'Space Grotesk',system-ui,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+  --sans:'Figtree',system-ui,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
 }
 *{box-sizing:border-box;margin:0;padding:0;}
 html{scroll-behavior:smooth;}
@@ -37,15 +41,31 @@ img{max-width:100%;display:block;}
 .nav .btn{padding:9px 18px;font-size:.86rem;}
 
 /* hero */
-.hero{background:radial-gradient(130% 120% at 80% 0%, #29373f 0%, var(--navy) 55%);color:#fff;padding:74px 0 84px;}
+.hero{background:linear-gradient(rgba(29,40,46,.78), rgba(29,40,46,.88)), url('/hero-bg.jpg') center/cover no-repeat;color:#fff;padding:74px 0 84px;}
 .hero .eyebrow{color:var(--gold);font-size:.8rem;letter-spacing:.22em;text-transform:uppercase;font-weight:700;margin-bottom:18px;}
+.hero-brand{margin-bottom:16px;}
+.hero-brand a{display:inline-block;line-height:0;}
+.hero-brand img{height:40px;width:auto;display:block;transition:opacity .18s ease;}
+.hero-brand a:hover img{opacity:.78;}
 .hero h1{font-family:var(--serif);font-size:3.15rem;line-height:1.08;font-weight:700;letter-spacing:-.5px;max-width:15ch;}
-.hero h1 .em{color:var(--gold-lt);font-style:italic;}
+.hero h1 .em{color:var(--gold-lt);}
 .hero .sub{font-size:1.22rem;color:#d3dbde;margin-top:22px;max-width:44ch;}
 .hero .cta-row{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px;}
 .hero .trust{margin-top:30px;font-size:.9rem;color:#9fb0b8;display:flex;align-items:center;gap:10px;flex-wrap:wrap;}
 .hero .trust b{color:#e6ecee;font-weight:600;}
 .hero .trust .dot{width:4px;height:4px;border-radius:50%;background:var(--gold);}
+
+/* hero grid, video & trust */
+.hero-grid{display:grid;grid-template-columns:1.02fr .98fr;gap:46px;align-items:center;}
+.hero-assure{margin-top:22px;font-size:.9rem;color:#9fb0b8;letter-spacing:.02em;}
+.hero-video .video-frame{position:relative;padding-bottom:56.25%;height:0;border-radius:12px;overflow:hidden;box-shadow:0 22px 55px rgba(0,0,0,.4);border:1px solid rgba(201,168,76,.28);background:#0e1519;}
+.hero-video .video-frame iframe{position:absolute;inset:0;width:100%;height:100%;}
+.hero-video .video-cap{text-align:center;font-size:.8rem;color:#8698a0;margin-top:12px;letter-spacing:.02em;}
+.hero-trust{display:flex;gap:50px;justify-content:center;margin:56px auto 0;padding-top:30px;border-top:1px solid rgba(255,255,255,.1);}
+.hero-trust .ti{text-align:center;}
+.hero-trust .tn{display:block;font-family:var(--serif);font-size:2.1rem;color:var(--gold);font-weight:700;line-height:1;}
+.hero-trust .tl{font-size:.78rem;color:#9fb0b8;letter-spacing:.06em;text-transform:uppercase;margin-top:6px;}
+@media(max-width:800px){ .hero-grid{grid-template-columns:1fr;gap:30px;} .hero-trust{gap:26px;flex-wrap:wrap;} .hero-trust .tn{font-size:1.7rem;} }
 
 /* situations */
 .situations{background:var(--cream);padding:56px 0;border-bottom:1px solid var(--line);}
@@ -62,7 +82,10 @@ img{max-width:100%;display:block;}
 .section .intro{text-align:center;color:var(--muted);font-size:1.08rem;max-width:52ch;margin:0 auto 42px;}
 
 /* steps */
-.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;}
+@media(max-width:1040px){.steps{grid-template-columns:repeat(3,1fr);gap:20px;}}
+@media(max-width:640px){.steps{grid-template-columns:1fr;}}
+.step h3{font-size:1.18rem;}
 .step{text-align:center;padding:8px;}
 .step .n{width:52px;height:52px;border-radius:50%;background:var(--navy);color:var(--gold);font-family:var(--serif);font-size:1.5rem;font-weight:700;display:grid;place-items:center;margin:0 auto 18px;}
 .step h3{font-family:var(--serif);font-size:1.3rem;color:var(--navy);margin-bottom:8px;}
@@ -76,8 +99,8 @@ img{max-width:100%;display:block;}
 .cols{display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:840px;margin:0 auto;}
 .col{background:var(--navy-2);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:26px 28px;}
 .col.us{border-color:var(--gold);}
-.col h4{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;font-weight:700;margin-bottom:16px;}
-.col.them h4{color:#8fa0a8;} .col.us h4{color:var(--gold);}
+.col h4{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;font-weight:700;margin-bottom:16px;min-height:30px;display:flex;align-items:center;}
+.col.them h4{color:#8fa0a8;} .col.us h4{color:var(--gold);} .col.us h4 img{height:26px;width:auto;display:block;}
 .col ul{list-style:none;}
 .col li{display:flex;gap:12px;align-items:flex-start;padding:9px 0;font-size:1rem;border-bottom:1px solid rgba(255,255,255,.06);}
 .col li:last-child{border-bottom:none;}
@@ -89,7 +112,7 @@ img{max-width:100%;display:block;}
 /* mike */
 .mike{background:var(--cream);}
 .mike-inner{max-width:760px;margin:0 auto;text-align:center;}
-.mike .quote{font-family:var(--serif);font-size:1.85rem;line-height:1.35;color:var(--navy);font-style:italic;}
+.mike .quote{font-family:var(--sans);font-size:1.85rem;line-height:1.35;color:var(--navy);font-weight:500;}
 .mike .quote .g{color:var(--gold-deep);}
 .mike .body{color:var(--muted);font-size:1.06rem;margin-top:22px;max-width:60ch;margin-left:auto;margin-right:auto;}
 .mike .sig{margin-top:24px;font-family:var(--serif);font-size:1.15rem;color:var(--navy);font-weight:700;}
@@ -114,7 +137,7 @@ footer .disc{color:#6b7981;font-size:.8rem;margin-top:6px;}
   .hero{padding:54px 0 60px;}
   .hero h1{font-size:2.35rem;}
   .hero .sub{font-size:1.08rem;}
-  .steps{grid-template-columns:1fr;gap:30px;}
+  .steps{gap:24px;}
   .cols{grid-template-columns:1fr;}
   .section{padding:54px 0;}
   .section h2,.mike .quote{font-size:1.7rem;}
@@ -131,22 +154,36 @@ footer .disc{color:#6b7981;font-size:.8rem;margin-top:6px;}
 <nav class="nav">
   <div class="wrap">
     <a href="/"><img class="logo" src="/qe-logo-white.png" alt="Lexbury Quick Exit"></a>
-    <a class="btn btn-gold" href="/book-call">Book a Call</a>
+    <a class="btn btn-gold" href="/book-call.html">Book a Call</a>
   </div>
 </nav>
 
 <!-- HERO -->
 <header class="hero">
   <div class="wrap">
-    <div class="eyebrow">A real buyer &middot; not a broker &middot; Calgary &amp; Alberta</div>
-    <h1>Ready to sell your business? <span class="em">Fast, private, done.</span></h1>
-    <p class="sub">One honest conversation, a fair offer, and a close in about 60&nbsp;days. No brokers, no fees, no parade of strangers through your business.</p>
-    <div class="cta-row">
-      <a class="btn btn-gold btn-lg" href="/assessment">See if you're a fit — 2 min</a>
-      <a class="btn btn-ghost btn-lg" href="/book-call">Book a call with Mike</a>
+    <div class="hero-grid">
+      <div class="hero-content">
+        <div class="hero-brand"><a href="https://lexbury.com" target="_blank" rel="noopener" title="Visit Lexbury Investments at lexbury.com"><img src="/lexbury-investments-white.png" alt="Lexbury Investments"></a></div>
+        <div class="eyebrow">A direct buyer &middot; Calgary &amp; Alberta</div>
+        <h1>Turn your business into a <span class="em">done deal.</span></h1>
+        <p class="sub">A real buyer, a fair offer, and a fast, private close. No broker, no listing, no one finds out.</p>
+        <div class="cta-row">
+          <a class="btn btn-gold btn-lg" href="/assessment.html">See if it's worth a conversation (2 min)</a>
+          <a class="btn btn-ghost btn-lg" href="/book-call.html">Book a call with Mike</a>
+        </div>
+        <div class="hero-assure">Private &middot; No obligation &middot; No one calls unless you ask.</div>
+      </div>
+      <div class="hero-video">
+        <div class="video-frame">
+          <iframe src="https://player.vimeo.com/video/1199830231?badge=0&amp;autopause=0&amp;title=0&amp;byline=0&amp;portrait=0" title="A word from Mike Cook" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="video-cap">A word from Mike, the buyer</div>
+      </div>
     </div>
-    <div class="trust">
-      <b>Mike Cook</b><span class="dot"></span>800+ businesses reviewed<span class="dot"></span>15 acquired<span class="dot"></span>Completely confidential
+    <div class="hero-trust">
+      <div class="ti"><span class="tn">802</span><span class="tl">Businesses Reviewed</span></div>
+      <div class="ti"><span class="tn">$250M+</span><span class="tl">Invested</span></div>
+      <div class="ti"><span class="tn">100%</span><span class="tl">Confidential</span></div>
     </div>
   </div>
 </header>
@@ -171,23 +208,33 @@ footer .disc{color:#6b7981;font-size:.8rem;margin-top:6px;}
 <section class="section">
   <div class="wrap">
     <div class="kicker">How it works</div>
-    <h2>Three steps. About sixty days.</h2>
+    <h2>Five steps. Under six months.</h2>
     <p class="intro">No listing. No prep. No dressing it up. You sell it as it is, quietly, on your timeline.</p>
     <div class="steps">
       <div class="step">
         <div class="n">1</div>
         <h3>One conversation</h3>
-        <p>Take the free 2-minute fit-check, or just book a call. You tell me about the business — no obligation, complete confidentiality.</p>
+        <p>A relaxed, confidential call. You walk me through the business, and I tell you honestly what I see. No obligation, and it stays private.</p>
       </div>
       <div class="step">
         <div class="n">2</div>
-        <h3>A fair offer</h3>
-        <p>I review your numbers directly — I'm the buyer, not a middleman. If it's a fit, I make you a fair, straightforward offer.</p>
+        <h3>A discreet visit</h3>
+        <p>We meet in person and I tour the operation, discreetly. As far as your team knows, I'm a prospective client, a supplier, or an advisor. No one learns you're selling until you choose to tell them.</p>
       </div>
       <div class="step">
         <div class="n">3</div>
+        <h3>A confidential review</h3>
+        <p>You share the financials, operations, and legal details, privately and under NDA, so I can prepare your valuation and offer. Diligence stays in-house. No outside parties poking around.</p>
+      </div>
+      <div class="step">
+        <div class="n">4</div>
+        <h3>A fair offer</h3>
+        <p>Based on the full picture, I make you a fair, straightforward offer, direct from the buyer. It often includes some seller financing to help it close.</p>
+      </div>
+      <div class="step">
+        <div class="n">5</div>
         <h3>We close</h3>
-        <p>Diligence handled internally, seller financing where it helps, and a close in about 60 days — on your terms.</p>
+        <p>Papers and terms arranged, and you're out. Quietly, and in less than 6 months.</p>
       </div>
     </div>
   </div>
@@ -211,12 +258,12 @@ footer .disc{color:#6b7981;font-size:.8rem;margin-top:6px;}
         </ul>
       </div>
       <div class="col us">
-        <h4>Lexbury Quick Exit</h4>
+        <h4><img src="/qe-logo-white.png" alt="Lexbury Quick Exit"></h4>
         <ul>
-          <li><span class="mark">✓</span> A real buyer with capital — me</li>
+          <li><span class="mark">✓</span> A real buyer with capital (me)</li>
           <li><span class="mark">✓</span> Your privacy, start to finish</li>
-          <li><span class="mark">✓</span> About 60 days to a close</li>
           <li><span class="mark">✓</span> No broker fees, no commissions</li>
+          <li><span class="mark">✓</span> Less than 6 months to close</li>
           <li><span class="mark">✓</span> A fair price you can count on</li>
         </ul>
       </div>
@@ -229,7 +276,7 @@ footer .disc{color:#6b7981;font-size:.8rem;margin-top:6px;}
   <div class="wrap mike-inner">
     <div class="kicker">Who you're dealing with</div>
     <p class="quote">"I'd rather lose a deal because we weren't a fit than <span class="g">waste your time pretending we are.</span>"</p>
-    <p class="body">I've spent my career acquiring private businesses — over 800 reviewed and 15 bought. I'm not a broker or a consultant. I don't list businesses, charge fees, or march buyers through your shop. When you're ready to sell, I'm the buyer. You give up the chance at top-of-market; in return, you get speed, privacy, and certainty of close.</p>
+    <p class="body">I've spent my career buying private businesses. Over 800 reviewed, 15 bought. I'm not a broker or a consultant. I don't list businesses, charge fees, or march buyers through your shop. When you're ready to sell, I'm the buyer. You give up a shot at top-of-market. In return you get speed, privacy, and a close you can count on.</p>
     <div class="sig">Mike Cook<small>LEXBURY INVESTMENTS &middot; CALGARY, AB</small></div>
   </div>
 </section>
@@ -238,10 +285,10 @@ footer .disc{color:#6b7981;font-size:.8rem;margin-top:6px;}
 <section class="final">
   <div class="wrap">
     <h2>Ready to be done?</h2>
-    <p>See if you're a fit in two minutes — no obligation, and no one calls unless you ask.</p>
+    <p>See if it's worth a conversation, in two minutes. No obligation, and no one calls unless you ask.</p>
     <div class="cta-row">
-      <a class="btn btn-gold btn-lg" href="/assessment">Take the 2-minute fit-check</a>
-      <a class="btn btn-ghost btn-lg" href="/book-call">Book a call with Mike</a>
+      <a class="btn btn-gold btn-lg" href="/assessment.html">See if it's worth a conversation</a>
+      <a class="btn btn-ghost btn-lg" href="/book-call.html">Book a call with Mike</a>
     </div>
     <div class="fine">Confidential &middot; No obligation &middot; Alberta businesses, $500K+ revenue</div>
   </div>
