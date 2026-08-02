@@ -207,10 +207,9 @@ const questions = [
       {label:'Other',value:'other',readiness:5,margin:'modest'}
     ]},
   { id:'revenue', number:'Question 2', text:"What's your approximate annual revenue?",
-    context:'A rough range is fine. We focus on Alberta businesses with $500K+ in revenue.',
+    context:'A rough range is fine. We focus on Alberta businesses with $1M+ in revenue.',
     options:[
-      {label:'Under $500K',desc:'Early stage or lifestyle business',value:'under500k',readiness:3,fit:'small'},
-      {label:'$500K – $1M',value:'500k-1m',readiness:6,fit:'yes'},
+      {label:'Under $1M',desc:'Below our usual range',value:'under1m',readiness:3,fit:'small'},
       {label:'$1M – $3M',value:'1m-3m',readiness:8,fit:'yes'},
       {label:'$3M – $5M',value:'3m-5m',readiness:9,fit:'yes'},
       {label:'$5M+',value:'5m+',readiness:9,fit:'yes'}
@@ -330,7 +329,7 @@ function showResults(){
   const cta=document.getElementById('results-cta');
 
   if(tooSmall){
-    recDiv.innerHTML='<div class="recommendation maxexit-fit"><div class="rec-title">You may be below our range</div><div class="rec-body">We usually buy Alberta businesses doing $500K or more in revenue. Yours may be under that, but every situation is different. If you want to talk it through, I\'m glad to. You\'re also welcome to my free book on what makes a business valuable.</div></div>';
+    recDiv.innerHTML='<div class="recommendation maxexit-fit"><div class="rec-title">You may be below our range</div><div class="rec-body">We usually buy Alberta businesses doing $1M or more in revenue. Yours may be under that, but every situation is different. If you want to talk it through, I\'m glad to. You\'re also welcome to my free book on what makes a business valuable.</div></div>';
     cta.innerHTML='<h3>Want to talk it through?</h3><p>No pressure, no obligation. Just a straight conversation about your options.</p><a href="'+BOOK_URL+'" class="btn btn-gold">Book a call with Mike</a><p style="margin:14px 0 0;font-size:.85rem;color:#9fb0b8">Or grab the <a href="'+BOOK_LINK+'" style="color:var(--gold-lt)">free book</a>.</p>';
   } else if(hasTime){
     recDiv.innerHTML='<div class="recommendation maxexit-fit"><div class="rec-title">You may do better taking your time</div><div class="rec-body">You told me you want top price and you\'re in no hurry. A Quick Exit trades some price for speed and certainty, so if you have the runway, you\'ll likely come out ahead by preparing and waiting for the right buyer. No pressure from me. Grab my <a href="'+BOOK_LINK+'">free book</a> on what makes a business valuable, and when you\'re ready to sell, I\'m your buyer.</div></div>';
